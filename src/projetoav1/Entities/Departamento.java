@@ -4,7 +4,9 @@
  */
 package projetoav1.Entities;
 
-public class Departamento {
+import java.io.Serializable;
+
+public class Departamento implements Serializable{
     
     private Long id;
     private String name;
@@ -16,4 +18,20 @@ public class Departamento {
         this.id = id;
         this.name = name;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    } 
 }

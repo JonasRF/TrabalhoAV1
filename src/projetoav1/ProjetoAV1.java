@@ -4,7 +4,7 @@
  */
 package projetoav1;
 
-import projetoav1.gui.MainView;
+import projetoav1.View.MainView;
 
 /**
  *
