@@ -93,7 +93,7 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuVendedorActionPerformed
 
     private void mnuDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuDepartamentoActionPerformed
-        // TODO add your handling code here:
+        new DepartamentView().setVisible(rootPaneCheckingEnabled);// TODO add  your handling code here:
     }//GEN-LAST:event_mnuDepartamentoActionPerformed
 
     /**
