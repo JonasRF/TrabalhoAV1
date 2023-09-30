@@ -1,8 +1,5 @@
 # build folders
 
-bin/
-nbproject/private
-build/
 .project
 build.xml
 manifest.mf
