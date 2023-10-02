@@ -7,7 +7,9 @@ package projetoav1.View;
 import javax.print.attribute.standard.Finishings;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import projetoav1.Controllers.ControladorLogin;
+import projetoav1.Entities.Departamento;
 
 /**
  *
@@ -15,9 +17,14 @@ import projetoav1.Controllers.ControladorLogin;
  */
 public class DepartamentView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DepartamentView
-     */
+    private DefaultTableModel tableModel;
+
+   
+    private void adicionarDepartamentoATabela(Departamento departamento) {
+    Object[] rowData = { departamento.getId(), departamento.getNome() };
+    tableModel.addRow(rowData);
+}
+    
     public DepartamentView() {
         initComponents();
     }
@@ -129,7 +136,7 @@ public class DepartamentView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

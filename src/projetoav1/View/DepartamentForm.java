@@ -4,15 +4,19 @@
  */
 package projetoav1.View;
 
-/**
- *
- * @author jonas
- */
-public class DepartamentForm extends javax.swing.JFrame {
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.List;
+import javax.swing.SwingUtilities;
+import projetoav1.Entities.DepartamentoRepo;
+import projetoav1.Entities.Departamento;
+import projetoav1.ProjetoAV1;
 
-    /**
-     * Creates new form DepartamentForm
-     */
+public class DepartamentForm extends javax.swing.JFrame {
+    
+     private DepartamentoRepo departamentoRepo;
+   
     public DepartamentForm() {
         initComponents();
     }
@@ -140,14 +144,22 @@ public class DepartamentForm extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    int id = Integer.parseInt(jTextField1.getText());
+    String nome = jTextField2.getText();
+    Departamento departamento = new Departamento(id, nome);
+    
+    departamentoRepo.salvarDepartamento(departamento);
+
+    setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
+    
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -174,6 +186,7 @@ public class DepartamentForm extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new DepartamentForm().setVisible(true);
             }
@@ -189,4 +202,6 @@ public class DepartamentForm extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+   
 }

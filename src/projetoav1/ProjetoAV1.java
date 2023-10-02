@@ -4,7 +4,12 @@
  */
 package projetoav1;
 
+
+import projetoav1.Entities.DepartamentoRepo;
 import projetoav1.View.MainView;
+
+
+
 
 /**
  *
@@ -17,5 +22,9 @@ public class ProjetoAV1 {
      */
     public static void main(String[] args) {
         new MainView().setVisible(true);
+       
     }
+    
 }
+        
+    

@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jonas/OneDrive/Área%20de%20Trabalho/ProjetoAV1/src/projetoav1/gui/MainView.java</file>
-            <file>file:/C:/Users/jonas/OneDrive/Área%20de%20Trabalho/ProjetoAV1/src/projetoav1/Entities/Departamento.java</file>
-            <file>file:/C:/Users/jonas/OneDrive/Área%20de%20Trabalho/ProjetoAV1/src/projetoav1/gui/DepartamentForm.java</file>
-            <file>file:/C:/Users/jonas/OneDrive/Área%20de%20Trabalho/ProjetoAV1/src/projetoav1/ProjetoAV1.java</file>
-            <file>file:/C:/Users/jonas/OneDrive/Área%20de%20Trabalho/ProjetoAV1/src/projetoav1/gui/DepartamentView.java</file>
+            <file>file:/C:/Users/Visão%20Nova/Desktop/TrabalhoAV1-main/src/projetoav1/Entities/DepartamentoRepo.java</file>
+            <file>file:/C:/Users/Visão%20Nova/Desktop/TrabalhoAV1-main/src/projetoav1/ProjetoAV1.java</file>
+            <file>file:/C:/Users/Visão%20Nova/Desktop/TrabalhoAV1-main/src/projetoav1/Entities/Departamento.java</file>
+            <file>file:/C:/Users/Visão%20Nova/Desktop/TrabalhoAV1-main/src/projetoav1/View/DepartamentForm.java</file>
         </group>
     </open-files>
 </project-private>
