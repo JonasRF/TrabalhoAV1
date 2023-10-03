@@ -4,12 +4,14 @@
  */
 package projetoav1.View;
 
+import java.util.List;
 import javax.print.attribute.standard.Finishings;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import projetoav1.Controllers.ControladorLogin;
 import projetoav1.Entities.Departamento;
+import projetoav1.Entities.DepartamentoRepo;
 
 /**
  *
@@ -17,13 +19,6 @@ import projetoav1.Entities.Departamento;
  */
 public class DepartamentView extends javax.swing.JFrame {
 
-    private DefaultTableModel tableModel;
-
-   
-    private void adicionarDepartamentoATabela(Departamento departamento) {
-    Object[] rowData = { departamento.getId(), departamento.getNome() };
-    tableModel.addRow(rowData);
-}
     
     public DepartamentView() {
         initComponents();
@@ -41,7 +36,7 @@ public class DepartamentView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        txtListar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
@@ -65,12 +60,12 @@ public class DepartamentView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton2.setText("LISTAR");
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        txtListar.setText("LISTAR");
+        txtListar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        txtListar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        txtListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                txtListarActionPerformed(evt);
             }
         });
 
@@ -108,7 +103,7 @@ public class DepartamentView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(txtListar)
                         .addGap(26, 26, 26))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -126,7 +121,7 @@ public class DepartamentView extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(33, 33, 33)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton2))
+                    .addComponent(txtListar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(22, 22, 22))
@@ -135,9 +130,21 @@ public class DepartamentView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void txtListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtListarActionPerformed
+        repo.obterTodos().forEach(
+        p -> System.out.println(p.id+" :: "+p.nome));
+        
+        String[] titulos = {"Id","Departamento"};
+        List<Departamento> lista = repo.obterTodos();
+        Object[][] valores = new Object[lista.size()][2];
+        for(int i=0; i<lista.size();i++){
+            valores[i][0] = lista.get(i).id;
+            valores[i][1] = lista.get(i).nome;
+        }
+        DefaultTableModel modelo = 
+                new DefaultTableModel(valores,titulos);
+        jTable1.setModel(modelo);      
+    }//GEN-LAST:event_txtListarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new DepartamentForm().setVisible(rootPaneCheckingEnabled);// TODO add your handling code here:
@@ -185,13 +192,16 @@ public class DepartamentView extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    private DepartamentoRepo repo = new DepartamentoRepo();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton txtListar;
     // End of variables declaration//GEN-END:variables
 }
