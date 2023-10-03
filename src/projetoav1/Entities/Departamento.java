@@ -8,30 +8,24 @@ import java.io.Serializable;
 
 public class Departamento implements Serializable{
     
-    private Long id;
-    private String name;
-    
-    public Departamento(){
-    }
+     int id;
+    private String nome;
 
-    public Departamento(Long id, String name) {
+    public Departamento(int id, String nome) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getNome() {
+        return nome;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nome: " + nome;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    } 
 }
