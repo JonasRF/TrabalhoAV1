@@ -7,25 +7,14 @@ package projetoav1.Entities;
 import java.io.Serializable;
 
 public class Departamento implements Serializable{
+    public Integer id;
+    public String nome;
     
-     int id;
-    private String nome;
-
-    public Departamento(int id, String nome) {
+    public Departamento (Integer id, String nome){
         this.id = id;
         this.nome = nome;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Nome: " + nome;
-    }
+     
 }
+
+
