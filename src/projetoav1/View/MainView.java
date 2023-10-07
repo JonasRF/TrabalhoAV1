@@ -6,7 +6,6 @@ package projetoav1.View;
 
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import javax.swing.Icon;
 import javax.swing.JDialog;
 import projetoav1.Controllers.ControladorLogin;
 
@@ -32,10 +31,17 @@ public class MainView extends javax.swing.JFrame {
     
      private ControladorLogin ctldLogin = new ControladorLogin();
     
-     private void atualizaMenus(){
-        mnuSignin.setEnabled(!ctldLogin.isLogado());
-        mnuSignout.setEnabled(ctldLogin.isLogado());
-        menuCadastro.setEnabled(ctldLogin.isLogado());
+     public void atualizaMenus(){
+        mnuSignin.setEnabled(!true);
+        mnuSignout.setEnabled(true);
+        menuCadastro.setEnabled(true);
+    }
+     
+     public void atualizaMenus01(){
+        mnuSignin.setEnabled(!true);
+        mnuSignout.setEnabled(true);
+        menuCadastro.setEnabled(true);
+        mnuVendedor.setEnabled(false);
     }
      
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -111,14 +117,7 @@ public class MainView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuSigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSigninActionPerformed
-        JDialog j1 = new LoginView(this, true);
-        j1.addComponentListener(new ComponentAdapter(){
-            @Override
-            public void componentHidden(ComponentEvent e) {
-                atualizaMenus();
-            }
-        });
-        j1.setVisible(true);
+       new LoginView().setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_mnuSigninActionPerformed
 
     private void mnuVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuVendedorActionPerformed
@@ -130,8 +129,8 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuDepartamentoActionPerformed
 
     private void mnuSignoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSignoutActionPerformed
-        ctldLogin.signOut();
-        atualizaMenus();
+        mnuSignout.setEnabled(false);
+        mnuSignin.setEnabled(true);
     }//GEN-LAST:event_mnuSignoutActionPerformed
 
     /**

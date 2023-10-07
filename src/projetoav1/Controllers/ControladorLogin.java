@@ -15,7 +15,9 @@ public class ControladorLogin {
     private static Usuario usuario = null;
     
     public void signOut(){
-        usuario = null;
+        
+         ;
+        
     }
     
     public boolean signIn(String login, String senha){
