@@ -4,10 +4,7 @@
  */
 package projetoav1.Entities;
 
-/**
- *
- * @author denis.cople
- */
+
 public class Usuario {
     public String nome;
     public String login;

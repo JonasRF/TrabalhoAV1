@@ -5,8 +5,6 @@
 package projetoav1.View;
 
 import java.util.List;
-import javax.print.attribute.standard.Finishings;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import projetoav1.Controllers.ControladorLogin;

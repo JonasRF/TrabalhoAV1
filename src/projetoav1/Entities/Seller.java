@@ -5,8 +5,6 @@
 package projetoav1.Entities;
 
 import java.io.Serializable;
-import java.util.Date;
-
 /**
  *
  * @author jonas

@@ -4,7 +4,6 @@
  */
 package projetoav1.View;
 
-import projetoav1.Entities.Departamento;
 import projetoav1.Entities.DepartamentoRepo;
 
 public class DepartamentForm extends javax.swing.JFrame {
