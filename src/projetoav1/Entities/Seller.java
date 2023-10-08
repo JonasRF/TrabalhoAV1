@@ -5,79 +5,26 @@
 package projetoav1.Entities;
 
 import java.io.Serializable;
-import java.util.Date;
+
 
 /**
  *
  * @author jonas
  */
 public class Seller implements Serializable{
- 
-    private Integer id;
-    private String name;
-    private String email;
-    private Date birthDate;
-    private Double baseSalary;
+    public Integer idS;
+    public String nomeS;
+    public String email;
+    public String birth;
+    public Integer salary;
     
-    private Departamento departamento;
+    public Seller (Integer idS, String nomeS, String email, String birth, Integer salary){
+        this.idS = idS;
+        this.nomeS = nomeS;
+        this.email = email;
+        this.birth = birth;
+        this.salary = salary;
+    }
     
-    public Seller(){
-    }
-
-    public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Departamento departamento) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.birthDate = birthDate;
-        this.baseSalary = baseSalary;
-        this.departamento = departamento;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public Double getBaseSalary() {
-        return baseSalary;
-    }
-
-    public void setBaseSalary(Double baseSalary) {
-        this.baseSalary = baseSalary;
-    }
-
-    public Departamento getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
-    }
 }
+

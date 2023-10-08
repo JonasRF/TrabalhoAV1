@@ -4,10 +4,10 @@
  */
 package projetoav1.View;
 
-/**
- *
- * @author jonas
- */
+
+import projetoav1.Entities.SellerRepo;
+
+
 public class SellerForm extends javax.swing.JFrame {
 
     /**
@@ -44,7 +44,7 @@ public class SellerForm extends javax.swing.JFrame {
 
         jLabel1.setText("Id");
 
-        jLabel2.setText("Name");
+        jLabel2.setText("Nome");
 
         sellerNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +80,7 @@ public class SellerForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Birth Date");
+        jLabel4.setText("Data de Nascimento");
 
         sellerEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +88,7 @@ public class SellerForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Base Salary");
+        jLabel5.setText("Salário Base");
 
         sellerSalary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +164,7 @@ public class SellerForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,7 +190,21 @@ public class SellerForm extends javax.swing.JFrame {
     }//GEN-LAST:event_sellerNomeActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        int idS = Integer.parseInt(sellerID.getText());
+        int salary = Integer.parseInt(sellerSalary.getText());
+        String birth = sellerDate.getText();
+        String nomeS = sellerNome.getText();
+        String email = sellerEmail.getText();
+        
+        repo.incluir(idS, nomeS, email, birth, salary);
+        
+        sellerID.setText("");
+        sellerNome.setText("");
+        sellerEmail.setText("");
+        sellerDate.setText("");
+        sellerSalary.setText("");
+        
+        setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void sellerDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sellerDateActionPerformed
@@ -240,6 +254,8 @@ public class SellerForm extends javax.swing.JFrame {
             }
         });
     }
+    
+    private SellerRepo repo = new SellerRepo();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
