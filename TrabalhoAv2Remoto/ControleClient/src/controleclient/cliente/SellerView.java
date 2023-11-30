@@ -9,7 +9,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import ClientCommon.entities.Seller;
-import controleserver.controller.SellerRepo;
+import controleclient.cliente.controller.SellerRepo;
 
 /**
  *

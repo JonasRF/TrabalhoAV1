@@ -6,7 +6,7 @@ package controleclient.cliente;
 
 import ClientCommon.controller.ControladorLogin;
 import ClientCommon.entities.Departamento;
-import controleserver.controller.DepartamentoRepo;
+import controleclient.cliente.controller.DepartamentoRepo;
 import java.util.List;
 import javax.print.attribute.standard.Finishings;
 import javax.swing.JFrame;

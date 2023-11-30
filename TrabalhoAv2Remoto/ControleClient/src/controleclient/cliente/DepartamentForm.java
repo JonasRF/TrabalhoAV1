@@ -4,7 +4,7 @@
  */
 package controleclient.cliente;
 
-import controleserver.controller.DepartamentoRepo;
+import controleclient.cliente.controller.DepartamentoRepo;
 
 public class DepartamentForm extends javax.swing.JFrame {
     

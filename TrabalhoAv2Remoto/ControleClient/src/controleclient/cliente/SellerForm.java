@@ -4,7 +4,7 @@
  */
 package controleclient.cliente;
 
-import controleserver.controller.SellerRepo;
+import controleclient.cliente.controller.SellerRepo;
 
 public class SellerForm extends javax.swing.JFrame {
 
