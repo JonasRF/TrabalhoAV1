@@ -20,7 +20,7 @@ public class ControleClient {
      */
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         try (Socket s1 = new Socket("127.0.0.1", 332)) {
-           new MainView().setVisible(true);
+          
         }
     }
     

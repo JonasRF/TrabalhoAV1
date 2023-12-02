@@ -3,9 +3,4 @@
 .project
 build.xml
 manifest.mf
-/TrabalhoAv2Remoto/ControleClient/build/
-/TrabalhoAv2Remoto/ControleCommon/build/
-/TrabalhoAv2Remoto/ControleCommon/nbproject/private/
-/TrabalhoAv2Remoto/ControleServer/build/
-/TrabalhoAv2Remoto/ControleServer/dist/
-/TrabalhoAv2Remoto/ControleServer/nbproject/private/
+
